@@ -35,15 +35,16 @@ public class GestorPDF {
             e.printStackTrace();
         }
     }
-    public String[] obtenerLíneasPdf(Paciente paciente){
-        String[] lineasPdf= new String[5];
-        lineasPdf[0]="__________";
-        lineasPdf[1]="Hospital";
-        lineasPdf[2]="Nombre: " +paciente.getNombre();
-        lineasPdf[3]= "Edad: " + paciente.getEdad();
+    public String[] obtenerLíneasPdf(Paciente paciente) {
+        String[] lineasPdf = new String[5];
+        lineasPdf[0] = "__________";
+        lineasPdf[1] = "Hospital";
+        lineasPdf[2] = "Nombre: " + paciente.getNombre();
+        lineasPdf[3] = "Edad: " + paciente.getEdad();
+        lineasPdf[4] = "Run: " + paciente.getRun();
         return lineasPdf;
     }
     private String generarNombrePdf(String nombre){
-        return ("target/"+"Paciente "+nombre+".pdf");
+        return ("Paciente "+nombre+".pdf");
     }
 }

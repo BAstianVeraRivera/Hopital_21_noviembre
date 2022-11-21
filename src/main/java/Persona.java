@@ -8,6 +8,9 @@ public abstract class Persona {
 		this.edad=edad;
 		this.run=run;
 	}
+	public String toString(){
+		return this.nombre+","+this.edad+","+this.run;
+	}
 
 	public String getNombre() {
 		return this.nombre;

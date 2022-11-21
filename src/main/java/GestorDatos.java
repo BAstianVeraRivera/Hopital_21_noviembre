@@ -30,7 +30,7 @@ public class GestorDatos {
             BufferedReader br = new BufferedReader(new FileReader(direccion));
             while((texto = br.readLine()) != null){
                 String[] data = texto.split(",");
-                hospital.getMedicos().add(new Medico (data[0],Integer.parseInt(data[1]),data[2]));
+                hospital.getMedicos().add(new Medico (data[0],Integer.parseInt(data[1]),data[2],Especialidad.valueOf(data[3])));
             }
         }catch(Exception e){
             System.err.println("No se encontró el archivo");
