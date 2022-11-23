@@ -3,20 +3,26 @@ import java.util.ArrayList;
 public class Hospital {
 	private String nombreHospital;
 	private ArrayList<Persona> personas = new ArrayList<Persona>();
+	private ArrayList<Medico> medicos = new ArrayList<Medico>();
+	private ArrayList<Paciente> pacientes = new ArrayList<Paciente>();
 	public Hospital (String nombreHospital){
 		this.nombreHospital=nombreHospital;
 	}
 
-	public ArrayList<Persona> getMedicos() {
-		return personas;
+	public ArrayList<Medico> getMedicos() {
+		return medicos;
 	}
-	public ArrayList<Persona> getPacientes() {
-		return personas;
+	public ArrayList<Paciente> getPacientes() {
+		return pacientes;
 	}
 
 	public void agregarPaciente(Paciente paciente) {
-		this.personas.add(paciente);
-		System.out.println("Paciente agregado");
+		this.pacientes.add(paciente);
+		System.out.println("Paciente registrado");
+	}
+	public void agregarMedico(Medico medico) {
+		this.medicos.add(medico);
+		System.out.println("Médico registrado");
 	}
 	public void contratarMedico(Medico doctor) {
 		this.personas.add(doctor);
